@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Natural Tones Palette */
+  --color-natural-bg: #F7F3E9;
+  --color-natural-text: #4A443F;
+  --color-leaf-green: #88B04B;
+  --color-leaf-dark: #6B8E36;
+  --color-sand: #D4A373;
+  --color-sand-light: #E0D7C6;
+  --color-cream: #FEFAE0;
+  --color-moss: #CCD5AE;
+  --color-sun: #FFD93D;
+}
+
+@layer base {
+  body {
+    @apply bg-natural-bg text-natural-text antialiased overflow-x-hidden;
+    direction: rtl;
+  }
+}
+
+.natural-card {
+  @apply bg-white rounded-[40px] border-4 border-sand-light shadow-sm overflow-hidden;
+}
+
+.natural-button {
+  @apply bg-sand text-white rounded-2xl font-bold transition-all hover:brightness-110 active:translate-y-1;
+}
+
+.leaf-button {
+  @apply bg-leaf-green border-b-4 border-leaf-dark text-white rounded-2xl font-bold transition-all hover:bg-leaf-dark active:border-b-0 active:translate-y-1;
+}
+
+.kid-shadow {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
+}
